@@ -2,4 +2,5 @@
 - hosts: all
   gather_facts: true
   tasks:
-    - setup:
+    - debug:
+        var: hostvars[inventory_hostname]
