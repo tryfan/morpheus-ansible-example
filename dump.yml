@@ -3,4 +3,5 @@
   gather_facts: true
   tasks:
     - debug:
-        var: hostvars[inventory_hostname]
+        msg: "{{ item }}"
+      loop: "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
