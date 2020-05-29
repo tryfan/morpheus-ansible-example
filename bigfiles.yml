@@ -1,6 +1,7 @@
 ---
 - hosts: all
   gather_facts: true
+  become: true
   tasks:
     - debug:
         msg: "60k - {{lookup('file', '/tmp/60k')}}"
