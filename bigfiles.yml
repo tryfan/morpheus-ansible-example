@@ -2,12 +2,5 @@
 - hosts: all
   gather_facts: true
   tasks:
-    - name: wreckit
-      debug: var=item
-      with_file:
-        - "/tmp/60k"
-        - "/tmp/66k"
-        - "/tmp/120k"
-        - "/tmp/129k"
-        - "/tmp/250k"
-        - "/tmp/260k"
+    - debug:
+        msg: "60k - {{lookup('file', '/tmp/60k')}}"
