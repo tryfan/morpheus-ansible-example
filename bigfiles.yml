@@ -3,5 +3,8 @@
   gather_facts: true
   become: true
   tasks:
-    - debug:
-        msg: "60k - {{lookup('file', '/tmp/60k')}}"
+    - name: ls
+      command: ls /tmp
+
+    - name: cat 60k
+      command: cat /tmp/60k
