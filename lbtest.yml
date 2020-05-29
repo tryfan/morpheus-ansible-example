@@ -1,0 +1,46 @@
+---
+- hosts: all
+  gather_facts: true
+  become: true
+  vars:
+    - rpm_install_listRH7:
+        - redhat-lsb
+        - net-tools
+        - bind-utils
+        - bash-completion
+        - wget
+        - curl
+        - lsof
+        - ftp
+        - sendmail
+        - sendmail-cf
+        - mailx
+        - perl
+        - perl-Params-Validate
+        - nfs-utils
+        - net-snmp-utils
+        - telnet
+        - tcpdump
+        - abrt-cli
+        - ntp
+        - ntpdate
+        - iptables-services
+#        - CentrifyDC
+#        - CentrifyDC
+#        - CentrifyDC
+#        - CentrifyDC
+        - zip
+        - tcsh
+        - rear
+        - genisoimage
+        - syslinux
+        - sed
+  tasks:
+    - name: RH7 Install packages for VMware builds
+      yum:
+        name: "{{ rpm_install_listRH7 }}"
+        state: present
+      ignore_errors: true
+      register: rpm_install_output
+      when: >
+        ansible_distribution_major_version == "7"
