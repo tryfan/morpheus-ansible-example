@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: true
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      loop:
+        - "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
+    - name: Reboot
+      reboot:
+    - debug:
+        msg: "{{ item }}"
+      loop:
+        - "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
