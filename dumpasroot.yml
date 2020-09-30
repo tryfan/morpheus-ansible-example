@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: true
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      loop: 
+        - "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
+        - "{{ hostvars[inventory_hostname]['morpheus'] | to_nice_yaml }}"
