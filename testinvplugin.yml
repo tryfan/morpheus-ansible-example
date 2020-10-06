@@ -1,0 +1,7 @@
+- hosts: taggroup
+  gather_facts: true
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      loop:
+        - "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
