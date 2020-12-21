@@ -8,7 +8,7 @@
     
     - name: Dump environment
       debug:
-        msg: "{{ environment | to_nice_yaml }}"
+        msg: "{{ lookup('env') }}"
 
     - name: Dump morpheus variable for this instance
       debug:
