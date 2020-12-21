@@ -2,9 +2,14 @@
 - hosts: all
   gather_facts: true
   tasks:
-    - debug:
-        msg: "{{ item }}"
-      loop: 
-        - "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
-        - "{{ environment | to_nice_yaml }}"
-        - "{{ hostvars[inventory_hostname]['morpheus'] | to_nice_yaml }}"
+    - name: Dump All hostvars for this instance
+      debug:
+        msg: "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
+    
+    - name: Dump environment
+      debug:
+        msg: "{{ environment | to_nice_yaml }}"
+
+    - name: Dump morpheus variable for this instance
+      debug:
+        msg: "{{ hostvars[inventory_hostname]['morpheus'] | to_nice_yaml }}"
