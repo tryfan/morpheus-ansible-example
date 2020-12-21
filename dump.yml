@@ -4,7 +4,7 @@
   tasks:
     - name: Dump All hostvars for this instance
       debug:
-        msg: "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
+        msg: "{{ hostvars[inventory_hostname] }}"
     
     - name: Dump environment
       debug:
