@@ -7,4 +7,4 @@
       loop: 
         - "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
         - "{{ environment | to_nice_yaml }}"
-#        - "{{ hostvars[inventory_hostname]['morpheus'] | to_nice_yaml }}"
+        - "{{ hostvars[inventory_hostname]['morpheus'] | to_nice_yaml }}"
