@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: try installing non-existent package
+      package:
+        name: klsjdfhgfksjdhf
+        state: present
