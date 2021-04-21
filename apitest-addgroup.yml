@@ -1,0 +1,14 @@
+- hosts: all
+  tasks:
+    - name: Add an Infrastructure group
+      uri:
+        url: "https://{{ morpheus['morpheus']['applianceHost'] }}/api/groups"
+        validate_certs: no
+        headers:
+        Content-type: "application/json"
+        Authorization: "BEARER {{ morpheus['morpheus']['apiAccessToken'] }}"
+        method: POST
+        body: {"group": {"name": "all", "code": "all", "location": "Rome"}}
+        body_format: json
+        return_content: yes
+      register: data
