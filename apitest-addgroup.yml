@@ -5,8 +5,8 @@
         url: "https://{{ morpheus['morpheus']['applianceHost'] }}/api/groups"
         validate_certs: no
         headers:
-        Content-type: "application/json"
-        Authorization: "BEARER {{ morpheus['morpheus']['apiAccessToken'] }}"
+          Content-type: "application/json"
+          Authorization: "BEARER {{ morpheus['morpheus']['apiAccessToken'] }}"
         method: POST
         body: {"group": {"name": "all", "code": "all", "location": "Rome"}}
         body_format: json
