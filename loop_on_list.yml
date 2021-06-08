@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+    - debug:
+        msg: "item: {{ item }}"
+      loop: "{{ morpheus['customOptions']['multitest'] }}"
