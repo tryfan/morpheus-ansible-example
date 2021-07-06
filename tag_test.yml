@@ -1,0 +1,12 @@
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Show message 1
+      debug:
+        msg: "This is a message from tag1"
+      tags: tag1
+      
+    - name: Show message 2
+      debug:
+        msg: "This is a message from tag2"
+      tags: tag2
