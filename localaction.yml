@@ -5,7 +5,7 @@
       register: remote_out
     
     - name: ls on local
-      local_action: shell ansible-config
+      local_action: shell ansible-config dump
       become: no
       register: local_out
 
