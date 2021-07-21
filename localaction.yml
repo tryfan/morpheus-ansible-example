@@ -4,5 +4,5 @@
       shell: ls -la
     
     - name: ls on local
-      local_action: ls -la
+      local_action: command ls
       become: no
