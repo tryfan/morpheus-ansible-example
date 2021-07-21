@@ -1,0 +1,8 @@
+- hosts: all
+  tasks:
+    - name: ls on remote
+      command: ls -la
+    
+    - name: ls on local
+      local_action: ls -la
+      become: no
