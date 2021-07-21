@@ -2,7 +2,15 @@
   tasks:
     - name: ls on remote
       shell: ls -la
+      register: remote_out
     
     - name: ls on local
-      local_action: command ls
+      local_action: shell ls -la
       become: no
+      register: local_out
+
+    - debug:
+        var: remote_out
+    
+    - debug:
+        var: local_out
