@@ -5,7 +5,7 @@
       register: remote_out
     
     - name: ls on local
-      local_action: shell ls -la
+      local_action: shell env
       become: no
       register: local_out
 
@@ -14,7 +14,3 @@
     
     - debug:
         var: local_out
-
-    - debug:
-        var: vars
-      delegate_to: localhost
