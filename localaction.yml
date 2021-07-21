@@ -14,3 +14,7 @@
     
     - debug:
         var: local_out
+
+    - debug:
+        var: vars
+      delegate_to: localhost
