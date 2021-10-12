@@ -4,8 +4,12 @@
   tasks:
     - name: Dump All hostvars for this instance
       debug:
-        msg: "{{ hostvars[inventory_hostname] | to_nice_yaml }}"
+        var: hostvars[inventory_hostname]
 
     - name: Dump morpheus variable for this instance
       debug:
-        msg: "{{ hostvars[inventory_hostname]['morpheus'] | to_nice_yaml }}"
+        var: hostvars[inventory_hostname]['morpheus']
+
+    - name: Dump morpheus variable raw
+      debug:
+        var: morpheus
