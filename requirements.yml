@@ -1,2 +1,8 @@
-- src: https://github.com/geerlingguy/ansible-role-repo-epel
-  name: geerling-epel
+roles:
+  - src: https://github.com/geerlingguy/ansible-role-repo-epel
+    name: geerling-epel
+
+collections:
+  - name: name: geerlingguy.php_roles
+    version: 0.9.3
+    source: https://galaxy.ansible.com
