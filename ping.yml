@@ -1,3 +1,3 @@
-- hosts: nctestgroup
+- hosts: unassigned
   tasks:
     - ping:
