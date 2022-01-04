@@ -1,4 +1,4 @@
 - hosts: development
   tasks:
     - debug:
-        var: host_vars
+        var: hostvars
