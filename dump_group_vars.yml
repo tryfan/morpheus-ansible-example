@@ -1,0 +1,4 @@
+- hosts: development
+  tasks:
+    - debug:
+        var: group_vars
