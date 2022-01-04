@@ -1,4 +1,4 @@
 - hosts: development
   tasks:
     - debug:
-        msg: "{{hostvars[inventory_hostname]['here_is_a_var']}}"
+        msg: "{{here_is_a_var}}"
