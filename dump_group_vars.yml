@@ -1,4 +1,4 @@
 - hosts: development
   tasks:
     - debug:
-        var: hostvars
+        msg: "{{hostvars|to_json}}"
