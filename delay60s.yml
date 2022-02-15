@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - ping:
+    - wait_for:
+        timeout: 60
+      delegate_to: localhost
