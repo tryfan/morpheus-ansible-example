@@ -1,4 +1,4 @@
 - hosts: all
   tasks:
     - debug:
-        msg: "secret is {{ lookup('cypher', 'secret=secret/SVC-SQLPOSH-P') }}"
+        msg: "secret is {{ lookup('cypher', 'secret=secret/SVC-SQLPOSH-P:testkey') }}"
