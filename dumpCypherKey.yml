@@ -1,0 +1,9 @@
+- hosts: localhost
+  tasks:
+    - name: Set the cypher key to lookup
+      set_fact:
+        cypherkey: "{{ morpheus['customOptions']['cypherKey'] }}"
+    - name: Access a cypher value
+      set_fact:
+        cyphervalue: "{{ lookup('cypher', cypherkey) }}"
+    - debug: var=cyphervalue
