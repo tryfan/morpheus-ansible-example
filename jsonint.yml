@@ -7,4 +7,4 @@
         from_set_fact: "{{ morpheus['instance']['id'] }}"
     - debug: var=fromvars
     - debug: var=declaredvar
-    - debug: from_set_fact
+    - debug: var=from_set_fact
