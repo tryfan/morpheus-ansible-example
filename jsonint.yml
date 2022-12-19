@@ -1,6 +1,7 @@
 - hosts: all
   vars:
     fromvars: "{{ morpheus['instance']['id'] }}"
+    fromvars_forceint: "{{ morpheus['instance']['id'] | int }}"
     declaredvar: 2112
   tasks:
     - set_fact:
