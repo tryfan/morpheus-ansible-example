@@ -6,6 +6,7 @@
   tasks:
     - set_fact:
         from_set_fact: "{{ morpheus['instance']['id'] }}"
+    - debug: var=morpheus['instance']['id']
     - debug: var=fromvars
     - debug: var=fromvars_forceint
     - debug: var=declaredvar
