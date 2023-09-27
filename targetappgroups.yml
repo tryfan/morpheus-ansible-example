@@ -4,4 +4,5 @@
 - hosts: "{{ morpheus['customOptions']['morph_appname'] }}_{{ morpheus['customOptions']['morph_app_tier'] }}"
   gather_facts: false
   tasks:
+    - debug: var=morpheus
     - ping:
