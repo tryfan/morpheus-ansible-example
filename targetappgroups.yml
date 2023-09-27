@@ -1,7 +1,7 @@
 ---
 # target child app group
 
-- hosts: "{{ morpheus['customOptions']['targetApp'] }}_{{ morpheus['customOptions']['targetAppTier'] }}"
+- hosts: "{{ morpheus['customOptions']['morph_appname'] }}_{{ morpheus['customOptions']['morph_app_tier'] }}"
   gather_facts: false
   tasks:
     - ping:
