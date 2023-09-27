@@ -6,3 +6,8 @@
   tasks:
     - debug: var=morpheus
     - ping:
+
+- hosts: "{{ morpheus['customOptions']['morph_appname'] }}"
+  gather_facts: false
+  tasks:
+    - ping:
