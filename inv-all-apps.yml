@@ -1,0 +1,4 @@
+---
+plugin: morpheus.core.morpheus_inventory
+groups: 
+  - searchtype: all_apps
