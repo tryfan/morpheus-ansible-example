@@ -1,0 +1,6 @@
+- name: Print Text
+  hosts: localhost
+  tasks:
+    - name: Print cypher
+      debug:
+        msg: "{{ lookup('cypher','secret=secret/svc.veeam') }}"
