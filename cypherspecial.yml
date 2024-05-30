@@ -2,3 +2,5 @@
   tasks:
     - debug:
         msg: "secret is {{ lookup('cypher', 'secret=secret/SVC-SQLPOSH-P:testkey') }}"
+    - debug:
+        msg: "case secret is {{ lookup('cypher', 'secret=secret/whatever:password') }}"
